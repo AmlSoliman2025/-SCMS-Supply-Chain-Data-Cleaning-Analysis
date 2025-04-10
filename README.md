@@ -52,7 +52,7 @@ To clean, transform, and enrich raw SCMS supply chain data into a reliable forma
 
 ## 📁 Output Files
 
-- The original file Supply_Chain_Shipment_Pricing from 
+- The original file Supply_Chain_Shipment_Pricing from (( https://www.kaggle.com/datasets/divyeshardeshana/supply-chain-shipment-pricing-data)).
 - `clean_data_for_powerbi.csv` → Power BI-ready CSV version
 - `SCMS cleaning.ipynb` → Full Jupyter Notebook with code and explanations
 
@@ -60,15 +60,25 @@ To clean, transform, and enrich raw SCMS supply chain data into a reliable forma
 
 ## 📊 Key Fields for Analysis
 
-| Column | Description |
-|--------|-------------|
-| `pq_to_po_days` | Days between PQ sent and PO sent |
-| `freight cost (usd)` | Imputed or original freight cost |
-| `freight_included_flag` | Boolean flag for freight inclusion |
-| `valid_timeline` | Boolean flag for timeline reliability |
-| `shipment mode` | Mode of delivery (e.g., Air, Sea) |
+| Column                     | Description                                         |
+|----------------------------|-----------------------------------------------------|
+| `project code`             | Shipment grouping by donor or project               |
+| `country`                  | For regional and country-level analysis             |
+| `vendor`                   | Central to performance and cost comparisons         |
+| `shipment mode`            | Impacts timing and cost                             |
+| `pq_to_po_days`            | Vendor response time to quotation                   |
+| `po_to_delivery_days`      | Vendor fulfillment speed (to be derived)            |
+| `freight cost (usd)`       | Direct logistics cost                               |
+| `freight_cost_per_unit`    | Normalized freight efficiency                       |
+| `line item value`          | Total order value                                   |
+| `weight (kilograms)`       | For freight cost per kg analysis                    |
+| `line item insurance (usd)`| Risk and cost-sharing under Incoterms               |
+| `vendor inco term`         | Defines cost responsibility                         |
+| `valid_timeline`           | Filters reliable time records                       |
+| `delivery recorded date`   | Actual inventory confirmation                       |
 
 ---
+
 
 ## 💡 Notes & Recommendations
 
@@ -84,4 +94,21 @@ To clean, transform, and enrich raw SCMS supply chain data into a reliable forma
 - Jupyter Notebook
 - Power BI (target platform)
 
+## 💡 Next Steps
 
+
+1. **Descriptive & Diagnostic Analysis**
+   - Explore delivery patterns, delays, and cost drivers
+
+2. **KPI Development**
+   - Build metrics like % on-time, average delay, freight per kg
+
+3. **Power BI Visualization**
+   - Create dashboards with filters by country, vendor, shipment mode
+
+4. **Reporting**
+   - Deliver actionable insights through Power Point presenation.
+  
+  ## 📬 Contact
+
+For questions or collaboration, reach out to [Aml Soliman] at [amlsoliman50@gmail.com].
