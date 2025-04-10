@@ -43,7 +43,10 @@ To clean, transform, and enrich raw SCMS supply chain data into a reliable forma
 ### 🔹 6. **Vendor & Country Standardization**
 - Converted all names to title case for consistency.
 - Fixed encoding issues like `"CÃ´te d'Ivoire"` → `"Côte d'Ivoire"`.
-- Mapped duplicate vendor names (e.g., `"Acouns Nigeria Ltd"` → `"Accoun Nigeria Limited"`).
+-  vendor names (e.g., `"Acouns Nigeria Ltd"` → `"Accoun Nigeria Limited"`) 
+    Not the Same Vendor: The name discrepancies, coupled with inconsistent pricing and product descriptions, suggest these are separate entries.
+
+
 
 
 
