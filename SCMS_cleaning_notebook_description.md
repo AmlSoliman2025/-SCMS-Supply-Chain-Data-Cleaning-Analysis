@@ -28,8 +28,13 @@ This Jupyter Notebook performs comprehensive data cleaning and transformation on
 ### 🧾 4. Insurance Cost Fixes
 - Applied logic based on `vendor inco term` to fill or nullify insurance fields
 - Used median group values where necessary
+  
+### ⚖️ 5. Weight Imputation 
+- Detected missing weight (kilograms) values in the dataset.
+- Imputed missing weights using median weight per kg from similar records:
+      Grouped by product group 
 
-### 🧭 5. Shipment Mode Imputation
+ ### 🧭 5. Shipment Mode Imputation
 - Imputed missing shipment modes using the **most common value per vendor**, falling back to the global mode ("Air")
 
 ### 🔠 6. Standardization & Cleanup
