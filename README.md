@@ -30,17 +30,22 @@ To clean, transform, and enrich raw SCMS supply chain data into a reliable forma
   - `product group`
   - `country`
   - `shipment mode`
+ ### 🔹 4. ** Weight Imputation**
+- Detected missing weight (kilograms) values in the dataset.
+- Imputed missing weights:
+    - Use the median weight per unit within each product group
+  
 
-### 🔹 4. **Insurance Logic Fix**
+### 🔹 5. **Insurance Logic Fix**
 - Where Incoterms (e.g., EXW, FCA) legally exclude insurance: filled with `0`.
 - Where insurance was required but missing: filled using group-level median.
 
-### 🔹 5. **Shipment Mode Imputation**
+### 🔹 6. **Shipment Mode Imputation**
 - Filled missing shipment modes using:
   - Vendor-level most common mode
   - Overall most common mode (fallback)
 
-### 🔹 6. **Vendor & Country Standardization**
+### 🔹 7. **Vendor & Country Standardization**
 - Converted all names to title case for consistency.
 - Fixed encoding issues like `"CÃ´te d'Ivoire"` → `"Côte d'Ivoire"`.
 -  vendor names (e.g., `"Acouns Nigeria Ltd"` → `"Accoun Nigeria Limited"`) 
